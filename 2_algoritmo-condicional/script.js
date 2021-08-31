@@ -14,7 +14,7 @@ if(text === 'Hola'){
     console.log('El texto ingresado: "' + text + '" es distinto de "Hola"');
 }
 
-let number2 = prompt('Ingrese un número')
+let number2 = prompt('Ingrese un número');
 
 if(number2 >= 10 && number2 <= 50){
     alert('El número ' + number2 + ' está entre 10 y 50');
