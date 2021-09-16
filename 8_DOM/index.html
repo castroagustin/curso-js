@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/106966e592.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Ventas</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__user"></div>
+    </header>
+    <nav class="nav">
+      <div class="nav__titleContainer">
+        <p class="nav__title">Menú</p>
+      </div>
+      <ul>
+        <li>
+          <a href="#" class="nav__item nav__item--active"
+            ><i class="fas fa-th-large"></i>
+            <p class="nav__tag">Inicio</p></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav__item"
+            ><i class="fas fa-tag"></i>
+            <p class="nav__tag">Ventas</p></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav__item"
+            ><i class="fas fa-truck"></i>
+            <p class="nav__tag">Envíos</p></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav__item"
+            ><i class="fas fa-archive"></i>
+            <p class="nav__tag">Productos</p></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav__item"
+            ><i class="fas fa-cog"></i>
+            <p class="nav__tag">Configuración</p></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main class="main">
+      <div class="products__container" id="productsContainer">
+        <div class="products__header">
+          <p>Productos:</p>
+          <div class="products__list">
+            <div class="list__row list__row--title">
+              <span class="row__text--title">Producto</span>
+              <span class="row__text--title row__text--center">Precio</span>
+              <span class="row__text--title">Stock</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
