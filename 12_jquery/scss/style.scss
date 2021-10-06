@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$primary-color: #E17373;
+$dark-grey: #2e2e2e;
+$light-grey: #F9F9F9;
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    padding: 2rem 3%;
+}
+
+.message{
+    position: fixed;
+    top: 2rem;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: $primary-color;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: all .5s ease;
+    opacity: 1;
+    &__icon{
+        margin-right: 1rem;
+    }
+}
+.header{
+    background-color: $light-grey;
+    padding-bottom: 2rem;
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 3% ;
+        align-items: center;
+        color: $dark-grey;
+        background-color: $light-grey;
+        &__title{
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        &__icons{
+            font-size: 1.2rem;
+            i{
+                margin-left: .3rem;
+            }
+        }
+    }
+    &__textColor{
+        color: $primary-color;
+        padding: 0 .3rem;
+    }
+    &__categories{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: 250px repeat(2, 180px);
+        grid-template-areas: 'slider slider'
+                             'women men'
+                             'discount discount';
+        gap: 10px;
+        padding: 0 3%;
+        &Container{
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+        .header__slider{
+            grid-area: slider;
+            background-image: url(../assets/headerSlider1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .header__women{
+            grid-area: women;
+            background-image: url(../assets/headerWomen.jpg);
+        }
+        .header__men{
+            grid-area: men;
+            background-image: url(../assets/headerMen.jpg);
+        }
+        .header__discount{
+            grid-area: discount;
+            background-image: url(../assets/headerDiscount.jpg);
+        }
+        &-text{
+            font-weight: 900;
+            font-size: 1.2rem;
+            position: absolute;
+            width: fit-content;
+            color: #fff;
+            padding: .5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            &::before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background: #0009;
+                z-index: -1;
+                backdrop-filter: blur(6.75px);
+            }
+        }
+    }
+}
+
+.sectionSales{
+    padding-left: 0;
+    padding-right: 0;
+    &__title{
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-left: 3%;
+        color: $dark-grey;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            border-radius: 3px;
+            width: 3rem;
+            height: 7px;
+            background-color: $primary-color;
+        }
+    }
+    &__container{
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 2%;
+    }
+    &__sale{
+        width: 48%;
+        min-height: 20px;
+        margin: 1%;
+        margin-bottom: 1rem;
+        color: $dark-grey;
+        .sale{
+            &__imgContainer{
+                height: fit-content;
+                margin-bottom: .5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &__img{
+                object-fit: cover;
+                width: 100%;
+                height: auto;
+            }
+            &__title{
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            &__price{
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: $primary-color;
+                span{
+                    text-decoration-line: line-through;
+                    font-size: .9rem;
+                    font-weight: 400;
+                    color: $dark-grey;
+                }
+            }
+            &__addCart{
+                font-size: .9rem;
+                text-decoration-line: underline;
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+    }
+}
+
+.hidden{
+    opacity: 0;
+}
+
+@import '_queries';

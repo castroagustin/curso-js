@@ -1,0 +1,70 @@
+
+
+@media (min-width: 768px){
+    .header{
+        .nav{
+            padding: 1rem 7%;
+        }
+        &__categories{
+            padding: 0 7%;
+            grid-template-columns: 50% repeat(2, auto);
+            grid-template-rows: repeat(2, 180px);
+            grid-template-areas: 'slider women men'
+                                 'slider discount discount';
+        }
+    }
+    .sectionSales{
+        &__title{
+            margin-left: 7%;
+        }
+        &__container{
+            padding: 0 6%;
+        }
+        &__sale{
+            width: 23%;
+        }
+    }    
+}
+  
+@media (min-width: 1281px){
+    .header{
+        .nav{
+            padding: 1rem 10%;
+        }
+        &__categories{
+            padding: 0 10%;
+            grid-template-rows: repeat(2, 220px);
+        }
+    }
+    .sectionSales{
+        &__title{
+            margin-left: 10%;
+        }
+        &__container{
+            padding: 0 9%;
+        }
+    }
+}
+
+@media (min-width: 1400px){
+    html{
+        font-size: 18px;
+    }
+    .header{
+        .nav{
+            padding: 1rem 15%;
+        }
+        &__categories{
+            padding: 0 15%;
+            grid-template-rows: repeat(2, 220px);
+        }
+    }
+    .sectionSales{
+        &__title{
+            margin-left: 15%;
+        }
+        &__container{
+            padding: 0 14%;
+        }
+    }
+}
